@@ -1,3 +1,6 @@
+# A simple Password_Generator by Sheikh Nafis
+
+
 import random
 
 # List 1: Create a list of letters from a-z and A-Z
