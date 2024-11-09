@@ -1,38 +1,7 @@
 # Hangman game created by Sheikh Nafis. Try to save the innocent man by guessing the word before time runs out! 
-
 import random
-
-words_list = [
-    # Countries
-    "Brazil", "Canada", "Mexico", "Greece", "Sweden", "Turkey", "France", "Russia", "Taiwan", "Austria",
-    
-    # Fruits
-    "Orange", "Banana", "Papaya", "Durian", "Tomato", "Lychees", "Coconut", "Plumcot", "Mangoes", "Jackfruit",
-    
-    # Foods
-    "Burger", "Noodles", "Cereals", "Samosas", "Lasagna", "Crumpet", "Risotto", "Bagel", "Omelets", "Tortilla",
-    
-    # Animals
-    "Giraffe", "Dolphin", "Rabbit", "Leopard", "Ostrich", "Beetles", "Cricket", "Buffalo", "Penguin", "Wombats",
-    
-    # Sports
-    "Soccer", "Tennis", "Cricket", "Bowling", "Cycling", "Boxing", "Wrestle", "Running", "Hockey", "Rowboat",
-    
-    # Vehicles
-    "Bicycle", "Scooter", "Airship", "Tramcar", "Subway", "Shuttle", "Freight", "Skate", "Trolley", "Cabinet",
-    
-    # Musical Instruments
-    "Guitar", "Violin", "Drumset", "Flutes", "Trumpet", "Bagpipe", "Clarion", "Keybord", "Cellist", "Saxhorn",
-    
-    # Flowers
-    "Dahlia", "Tulips", "Orchid", "Lobelia", "Daisies", "Marigold", "Primula", "Hyacinth", "Lilac", "Peonies",
-    
-    # Occupations
-    "Teacher", "Engineer", "Plumber", "Nursing", "Artists", "Farmers", "Doctors", "Writers", "Soldier", "Sailors",
-    
-    # Elements
-    "Oxygen", "Nitrogen", "Sulphur", "Calcium", "Carbon", "Silicon", "Helium", "Lithium", "Phosph", "Iron"
-]
+from word_collection import words_list
+from hangman_ascii import hangman, hangman_title
 
 # Get the total number of items in the list of words
 total_words_count = len(words_list)
@@ -44,8 +13,7 @@ random_index = random.randint(0, total_words_count - 1)
 selected_word = words_list[random_index]
 
 # Get the length of the randomly selected word
-selected_word_length = len(selected_word)
-# print("Randomly chosen word:", selected_word)
+selected_word_length = len(selected_word) # print("Randomly chosen word:", selected_word)
 
 hidden_word = "_" * selected_word_length
 # Convert the hidden word into a list for easy letter replacement
@@ -54,91 +22,6 @@ hidden_word_list = list(hidden_word)
 # Convert the selected word into a list of characters
 selected_word_list = list(selected_word.lower())
 
-# Raw strings (using the 'r' prefix) are used to avoid issues with escape sequences.
-hangman = [r"""
- ____  
-|/   | 
-|   (_)
-|    
-|    
-|    
-|
-|_____
-""",
-r"""
- ____  
-|/   | 
-|   (_)
-|    | 
-|    |    
-|    
-|
-|_____
-""",
-r"""
- ____  
-|/   | 
-|   (_)
-|   \| 
-|    | 
-|    
-|
-|_____
-""",
-r"""
- ____  
-|/   | 
-|   (_)
-|   \|/
-|    | 
-|    
-|
-|_____
-""",
-r"""
- ____  
-|/   | 
-|   (_)
-|   \|/
-|    | 
-|   / 
-|
-|_____
-""",
-r"""
- ____  
-|/   | 
-|   (_)
-|   \|/
-|    | 
-|   / \
-|
-|_____
-""",
-r"""
- ____  
-|/   | 
-|   (_)
-|   /|\
-|    | 
-|   | |
-|
-|_____
-"""]
-
-hangman_title = """
-888                                                           
-888                                                           
-888                                                           
-88888b.  8888b. 88888b.  .d88b. 88888b.d88b.  8888b. 88888b.  
-888 "88b    "88b888 "88bd88P"88b888 "888 "88b    "88b888 "88b 
-888  888.d888888888  888888  888888  888  888.d888888888  888 
-888  888888  888888  888Y88b 888888  888  888888  888888  888 
-888  888"Y888888888  888 "Y88888888  888  888"Y888888888  888 
-                             888                              
-                        Y8b d88P                              
-                         "Y88P"       
-"""
 
 print(hangman_title)
 print("In Hangman, you guess letters to figure out a hidden word. For every wrong guess, a part of a stick figure is drawn—guess the word before the man gets hanged!\n")
