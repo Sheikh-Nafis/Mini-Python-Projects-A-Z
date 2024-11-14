@@ -8,7 +8,7 @@
 <h4>This repository is designed to:</h4>
 <p>Document my growth as a Python developer.</p>
 <p>Demonstrate fundamental to advanced concepts through practical mini-projects.</p>
-<p>Provide a resource for beginners looking to understand Python basics through small, digestible projects.</p>
+<p>Provide a resource for beginners looking to understand Python basics through small projects.</p>
 <p>Each project is named and organized to reflect the concepts used, with detailed explanations to make them accessible and educational.</p><hr><br>
 
 ### Tools and Libraries
