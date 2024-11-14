@@ -1,4 +1,5 @@
-from Ciphar_Ascii_Art import ascii_art
+# A simple Caesar Ciphar using list by Sheikh Nafis
+from Ciphar_Ascii_Art import ascii_art, description
 # my_list = [chr(i) for i in range(97, 123)]
 my_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -19,6 +20,7 @@ def caesar(switch_mode, message, caesar_value):
         print(f'The {switch_mode}d message is',''.join(encrypted_text))
 
 print(ascii_art)
+print(description)
 while True:
     set_fuction = input("Type 'encode' to encrypt or type 'decode' to decrypt:\n")
     if set_fuction == 'encode' or set_fuction == 'decode':

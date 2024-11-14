@@ -1,4 +1,5 @@
-from Ciphar_Ascii_Art import ascii_art
+# A simple yet advance Caesar Ciphar using ascii/unicode by Sheikh Nafis
+from Ciphar_Ascii_Art import ascii_art, description
 def caesar(switch_mode, message, caesar_value):
     encrypt_or_decrypt_text = []
 
@@ -15,6 +16,8 @@ def caesar(switch_mode, message, caesar_value):
 
 
 print(ascii_art)
+print(description)
+
 while True:
     set_fuction = input("Type 'encode' to encrypt or type 'decode' to decrypt:\n")
     if set_fuction == 'encode' or set_fuction == 'decode':
